@@ -1,0 +1,286 @@
+Microsoft Windows [Version 10.0.17763.529]
+(c) 2018 Microsoft Corporation. All rights reserved.
+
+C:\Users\Amar>netsh int tcp show global
+Querying active state...
+
+TCP Global Parameters
+----------------------------------------------
+Receive-Side Scaling State          : enabled
+Receive Window Auto-Tuning Level    : normal
+Add-On Congestion Control Provider  : default
+ECN Capability                      : disabled
+RFC 1323 Timestamps                 : disabled
+Initial RTO                         : 3000
+Receive Segment Coalescing State    : enabled
+Non Sack Rtt Resiliency             : disabled
+Max SYN Retransmissions             : 2
+Fast Open                           : enabled
+Fast Open Fallback                  : enabled
+HyStart                             : enabled
+Pacing Profile                      : off
+
+
+C:\Users\Amar>netsh int tcp set chimney=enabled
+The following command was not found: int tcp set chimney=enabled.
+
+C:\Users\Amar>ipconfig/flushdns
+
+Windows IP Configuration
+
+Successfully flushed the DNS Resolver Cache.
+
+C:\Users\Amar>netsh int ip reset c:\resetlog.txt
+Resetting Compartment Forwarding, OK!
+Resetting Compartment, OK!
+Resetting Control Protocol, OK!
+Resetting Echo Sequence Request, OK!
+Resetting Global, failed.
+The requested operation requires elevation (Run as administrator).
+Resetting Interface, failed.
+The requested operation requires elevation (Run as administrator).
+Resetting Anycast Address, OK!
+Resetting Multicast Address, OK!
+Resetting Unicast Address, failed.
+The requested operation requires elevation (Run as administrator).
+Resetting Neighbor, failed.
+The requested operation requires elevation (Run as administrator).
+Resetting Path, failed.
+The requested operation requires elevation (Run as administrator).
+Resetting Potential, OK!
+Resetting Prefix Policy, OK!
+Resetting Proxy Neighbor, OK!
+Resetting Route, failed.
+The requested operation requires elevation (Run as administrator).
+Resetting Site Prefix, OK!
+Resetting Subinterface, OK!
+Resetting Wakeup Pattern, OK!
+Resetting Resolve Neighbor, OK!
+Resetting , OK!
+Resetting , OK!
+Resetting , OK!
+Resetting , OK!
+Resetting , failed.
+The requested operation requires elevation (Run as administrator).
+Resetting , OK!
+Resetting , OK!
+Resetting , OK!
+Resetting , failed.
+The requested operation requires elevation (Run as administrator).
+Resetting , OK!
+Resetting , OK!
+Resetting , OK!
+Restart the computer to complete this action.
+
+
+C:\Users\Amar>ipconfig
+
+Windows IP Configuration
+
+
+Ethernet adapter Ethernet:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Wireless LAN adapter Local Area Connection* 1:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Wireless LAN adapter Local Area Connection* 2:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Ethernet adapter VMware Network Adapter VMnet1:
+
+   Connection-specific DNS Suffix  . :
+   Link-local IPv6 Address . . . . . : fe80::7c91:23b4:a28b:d2ea%20
+   IPv4 Address. . . . . . . . . . . : 192.168.74.1
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . :
+
+Ethernet adapter VMware Network Adapter VMnet8:
+
+   Connection-specific DNS Suffix  . :
+   Link-local IPv6 Address . . . . . : fe80::1846:69e2:a133:9dd%19
+   IPv4 Address. . . . . . . . . . . : 192.168.216.1
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . :
+
+Wireless LAN adapter Wi-Fi:
+
+   Connection-specific DNS Suffix  . : domain.name
+   Link-local IPv6 Address . . . . . : fe80::8041:3d17:6a1:caf2%16
+   IPv4 Address. . . . . . . . . . . : 192.168.1.127
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : fe80::1262:ebff:fe28:a395%16
+                                       fe80::1262:ebff:fe29:7849%16
+                                       192.168.1.1
+
+C:\Users\Amar>ping -t 192.168.1.1
+
+Pinging 192.168.1.1 with 32 bytes of data:
+Reply from 192.168.1.1: bytes=32 time=6ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=6ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=20ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=8ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=8ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=6ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=11ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=6ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=8ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=55ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=6ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=7ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=10ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=8ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=9ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=7ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=5ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=29ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=9ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=9ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=6ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=11ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=8ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=22ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=10ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=6ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=8ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=7ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=6ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=16ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=27ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=8ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=12ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=6ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=7ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=7ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=6ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=9ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=5ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=6ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=21ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=7ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=6ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=11ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=6ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=11ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=10ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=5ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=23ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=41ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=6ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=6ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=17ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=6ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=6ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=10ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=6ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=5ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=11ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=11ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=8ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=23ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=6ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=6ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=15ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=8ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=5ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=10ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=7ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=6ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=7ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=8ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=6ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=8ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=36ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=6ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=10ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=27ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=6ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=6ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=9ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=6ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=5ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=6ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=7ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=72ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=279ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=677ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=124ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=29ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=44ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=100ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=20ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=86ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=6ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=6ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=5ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=9ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=33ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=74ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=15ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=86ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=203ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=35ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=36ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=264ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=304ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=13ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=23ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=153ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=560ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=1081ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=287ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=70ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=278ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=358ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=396ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=7ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=7ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=149ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=7ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=14ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=76ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=7ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=55ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=11ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=53ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=6ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=20ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=301ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=63ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=490ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=138ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=144ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=56ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=8ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=6ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=6ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=4ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=9ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=6ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=20ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=227ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=5ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=7ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=15ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=11ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=8ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=9ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=9ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=8ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=8ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=5ms TTL=30
+Reply from 192.168.1.1: bytes=32 time=14ms TTL=30
+
+Ping statistics for 192.168.1.1:
+    Packets: Sent = 154, Received = 154, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 4ms, Maximum = 1081ms, Average = 55ms
+Control-C
+^C
+C:\Users\Amar>
